@@ -11,8 +11,8 @@ let bankAccount:BankAccount = {
 
 let myself: {name: string, bankAccount: BankAccount, hobbies: string[]} = {
   name:'Nils',
-  bankAccount = BankAccount,
-  hobbies = ['PS4', 'Games']
+  bankAccount: bankAccount,
+  hobbies: ['PS4', 'Games']
 };
 
 myself.bankAccount.deposit(3000);
