@@ -1,12 +1,13 @@
+"use strict";
 // string
 var myName = 'Nils';
-// myName = 28; // compilation error 
+// myName = 28; // compilation error
 //number
 var myAge = 31;
-// myAge = 'Test'; // compilation error 
+// myAge = 'Test'; // compilation error
 //boolean
 var hasHobbies = false;
-// hasHobbies = 1; // compilation error 
+// hasHobbies = 1; // compilation error
 // assign types
 var myRealAge;
 myRealAge = 31;
@@ -67,8 +68,19 @@ var complex = {
 // use pipe to accept multiple types
 var myRealRealAge = 27;
 myRealRealAge = "27";
+// myRealRealAge = true; // throw a compilaton exception
 // check types
 var finalValue = "A string";
 if (typeof finalValue == "number") {
     console.log("Final Value is a number");
 }
+// never
+function neverReturn() {
+    throw new Error('An error!');
+}
+// nullabe types
+var canBeNull = 12; // can be a number or null, overrides the compile option for this variable
+canBeNull = null;
+var canAlsoBeNull;
+// initialized to undefined
+canAlsoBeNull = null;

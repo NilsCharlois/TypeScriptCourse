@@ -1,14 +1,14 @@
 // string
 let myName = 'Nils';
-// myName = 28; // compilation error 
+// myName = 28; // compilation error
 
 //number
 let myAge = 31;
-// myAge = 'Test'; // compilation error 
+// myAge = 'Test'; // compilation error
 
 //boolean
 let hasHobbies = false;
-// hasHobbies = 1; // compilation error 
+// hasHobbies = 1; // compilation error
 
 // assign types
 let myRealAge: number;
@@ -79,7 +79,7 @@ type Complex = {data: number[], output: (all: boolean)=>number[]};
 // complex object
 let complex: Complex = {
     data: [100,3.99,10],
-    
+
     output: function(all: boolean): number[] {
         return this.data;
     }
@@ -88,10 +88,24 @@ let complex: Complex = {
 // use pipe to accept multiple types
 let myRealRealAge: number | string = 27;
 myRealRealAge = "27";
+// myRealRealAge = true; // throw a compilaton exception
 
 // check types
 let finalValue = "A string";
 if(typeof finalValue == "number") {
     console.log("Final Value is a number");
-    
 }
+
+// never
+function neverReturn(): never {
+  throw new Error('An error!');
+}
+
+// nullabe types
+let canBeNull: number | null = 12; // can be a number or null, overrides the compile option for this variable
+canBeNull = null;
+let canAlsoBeNull;
+// initialized to undefined
+canAlsoBeNull = null;
+let canThisBeAny: number | null = null;
+canThisBeAny = 12;
