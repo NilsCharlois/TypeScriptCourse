@@ -31,6 +31,10 @@ console.log(Math.min.apply(Math, numbers));
 var newArray = [55, 20];
 Array.prototype.push.apply(newArray, numbers);
 console.log(newArray);
+// Exercise 4 - Solution
+var newArray = [55, 20];
+newArray.push.apply(newArray, numbers);
+console.log(newArray);
 // Exercise 5 - That's a well-constructed array.
 // var testResults = [3.89, 2.99, 1.38];
 // var result1 = testResults[0];
